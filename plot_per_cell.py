@@ -4,7 +4,6 @@ import data_loader as dl
 import options_parser as op
 import pandas as pd
 import random
-from sklearn.manifold import TSNE
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
@@ -74,7 +73,7 @@ def main(args):
             continue
         if cell_type != cell_1 and cell_type != cell_2:
             continue
-        if pert_id not in fda_approved:
+        if pert_id not in fda_approved and pert_id != 'DMSO':
             continue
         if pert_id != 'DMSO' and pert_id != 'vorinostat':
             continue
