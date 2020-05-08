@@ -23,7 +23,7 @@ def get_embedding(net, x):
     o = deepcopy(x)
     for idx, layer in enumerate(net.net):
         o = layer(o)
-        if idx == 1:
+        if idx == 0:
             break
     return o
 
